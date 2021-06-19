@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\Game01.csproj",
+      "projectUniqueName": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\Game01\\Game01.csproj",
       "projectName": "Game01",
-      "projectPath": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\Game01.csproj",
+      "projectPath": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\Game01\\Game01.csproj",
       "packagesPath": "C:\\Users\\HP i7\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\obj\\",
+      "outputPath": "C:\\Users\\HP i7\\Desktop\\Game01\\Game01\\Game01\\Game01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP i7\\AppData\\Roaming\\NuGet\\NuGet.Config",
