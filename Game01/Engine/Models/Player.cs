@@ -14,39 +14,39 @@ namespace Engine.Models
 
         private int exp;
 
-        private float level;
+        private int level;
 
         private int gold;
 
 
-        public void setNome(Player model)
+        public void setNome(String model)
         {
-            this.nome = model.nome;
+            this.nome = model;
         }
 
-        public void setClasse(Player model)
+        public void setClasse(String model)
         {
-            this.classe = model.classe;
+            this.classe = model;
         }
 
-        public void setHitPoints(Player model)
+        public void setHitPoints(int model)
         {
-            this.hitPoints = model.hitPoints;
+            this.hitPoints = model;
         }
 
-        public void setExp(Player model)
+        public void setExp(int model)
         {
-            this.exp = model.exp;
+            this.exp = model;
         }
 
-        public void setLevel(Player model)
+        public void setLevel(int model)
         {
-            this.level = model.level;
+            this.level = model;
         }
 
-        public void setGold(Player model)
+        public void setGold(int model)
         {
-            this.gold = model.gold;
+            this.gold = model;
         }
 
         public String getNome()
@@ -69,7 +69,7 @@ namespace Engine.Models
             return exp;
         }
 
-        public float getLevel()
+        public int getLevel()
         {
             return level;
         }
