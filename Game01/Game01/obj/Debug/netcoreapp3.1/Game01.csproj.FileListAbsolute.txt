@@ -2,7 +2,6 @@ C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game01.cspro
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game01_MarkupCompile.cache
-C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game01_MarkupCompile.lref
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Game01.exe
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Game01.deps.json
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Game01.runtimeconfig.json
@@ -38,3 +37,6 @@ C:\Users\HP i7\Desktop\Game01\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game0
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Engine.dll
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Engine.pdb
 C:\Users\HP i7\Desktop\Game01\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game01.csproj.CopyComplete
+C:\Users\HP i7\Desktop\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Engine.dll
+C:\Users\HP i7\Desktop\Game01\Game01\Game01\bin\Debug\netcoreapp3.1\Engine.pdb
+C:\Users\HP i7\Desktop\Game01\Game01\Game01\obj\Debug\netcoreapp3.1\Game01.csproj.CopyComplete

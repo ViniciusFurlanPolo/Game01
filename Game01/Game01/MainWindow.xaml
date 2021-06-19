@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Scott's Awesome Game" Height="768" Width="1024">
+        Title="Meu primeiro jogo" Height="768" Width="1024">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,6 +22,7 @@
 
         <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -47,6 +48,7 @@
             <Label Grid.Row="4" Grid.Column="1" Content="{Binding PlayerAtual.level}"/>
             <Label Grid.Row="5" Grid.Column="0" Content="Gold: "/>
             <Label Grid.Row="5" Grid.Column="1" Content="{Binding PlayerAtual.gold}"/>
+            <Button Grid.Row="6" Grid.Column="1" Content="AddXP" Click="ButtonBase_OnClick"/>
 
         </Grid>
         <Label Grid.Row="1" Grid.Column="1" Content="Game Data" Background="Beige"/>

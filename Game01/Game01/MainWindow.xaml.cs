@@ -32,5 +32,10 @@ namespace Game01
 
             DataContext = _gameSession;
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            _gameSession.PlayerAtual.exp++;
+        }
     }
 }
