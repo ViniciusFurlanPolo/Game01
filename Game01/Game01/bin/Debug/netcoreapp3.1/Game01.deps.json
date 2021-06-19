@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "Game01/1.0.0": {
+        "dependencies": {
+          "Engine": "1.0.0"
+        },
         "runtime": {
           "Game01.dll": {}
+        }
+      },
+      "Engine/1.0.0": {
+        "runtime": {
+          "Engine.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Game01/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Engine/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

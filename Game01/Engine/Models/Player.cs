@@ -4,80 +4,19 @@ using System.Text;
 
 namespace Engine.Models
 {
-    class Player
+    public class Player
     {
-        private String nome;
+        public String nome { get; set; }
 
-        private String classe;
+        public String classe { get; set; }
 
-        private int hitPoints;
+        public int hitPoints { get; set; }
 
-        private int exp;
+        public int exp { get; set; }
 
-        private int level;
+        public int level { get; set; }
 
-        private int gold;
-
-
-        public void setNome(String model)
-        {
-            this.nome = model;
-        }
-
-        public void setClasse(String model)
-        {
-            this.classe = model;
-        }
-
-        public void setHitPoints(int model)
-        {
-            this.hitPoints = model;
-        }
-
-        public void setExp(int model)
-        {
-            this.exp = model;
-        }
-
-        public void setLevel(int model)
-        {
-            this.level = model;
-        }
-
-        public void setGold(int model)
-        {
-            this.gold = model;
-        }
-
-        public String getNome()
-        {
-            return nome;
-        }
-
-        public String getClasse()
-        {
-            return classe;
-        }
-
-        public int getHitPionts()
-        {
-            return hitPoints;
-        }
-
-        public int getExp()
-        {
-            return exp;
-        }
-
-        public int getLevel()
-        {
-            return level;
-        }
-
-        public int getGold()
-        {
-            return gold;
-        }
+        public int gold { get; set; }
 
     }
 }
