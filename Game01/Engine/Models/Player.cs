@@ -19,7 +19,7 @@ namespace Engine.Models
         private int gold;
 
 
-        public void set(Player model)
+        public void setNome(Player model)
         {
             this.nome = model.nome;
         }
