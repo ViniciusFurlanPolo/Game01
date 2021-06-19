@@ -22,12 +22,31 @@ namespace Engine.Models
         public void set(Player model)
         {
             this.nome = model.nome;
-            this.classe = model.classe;
-            this.hitPoints = model.hitPoints;
-            this.exp = model.exp;
-            this.level = model.level;
-            this.gold = model.gold;
+        }
 
+        public void setClasse(Player model)
+        {
+            this.classe = model.classe;
+        }
+
+        public void setHitPoints(Player model)
+        {
+            this.hitPoints = model.hitPoints;
+        }
+
+        public void setExp(Player model)
+        {
+            this.exp = model.exp;
+        }
+
+        public void setLevel(Player model)
+        {
+            this.level = model.level;
+        }
+
+        public void setGold(Player model)
+        {
+            this.gold = model.gold;
         }
 
         public String getNome()
