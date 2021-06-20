@@ -2,15 +2,63 @@
 using Engine.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Engine.ViewModels
 {
-    public class GameSession
+    public class GameSession : INotifyPropertyChanged
     {
+        private Location Location;
+
         public Player PlayerAtual { get; set; }
-        public Location LocalAtual { get; set; }
         public World MundoAtual { get; set; }
+        public Location LocalAtual 
+        {
+            get { return Location; }
+            set
+            {
+                Location = value;
+
+                OnPropertyChanged("LocalAtual");
+                OnPropertyChanged("HasLocationToNorth");
+                OnPropertyChanged("HasLocationToEast");
+                OnPropertyChanged("HasLocationToWest");
+                OnPropertyChanged("HasLocationToSouth");
+            }
+        }
+
+        public bool HasLocationToNorth
+        {
+            get
+            {
+                return MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY + 1) != null;
+            }
+        }
+
+        public bool HasLocationToEast
+        {
+            get
+            {
+                return MundoAtual.localAtual(LocalAtual.coordenadaX +1, LocalAtual.coordenadaY) != null;
+            }
+        }
+
+        public bool HasLocationToSouth
+        {
+            get
+            {
+                return MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY - 1) != null;
+            }
+        }
+
+        public bool HasLocationToWest
+        {
+            get
+            {
+                return MundoAtual.localAtual(LocalAtual.coordenadaX -1, LocalAtual.coordenadaY) != null;
+            }
+        }
 
         public GameSession()
         {
@@ -26,12 +74,33 @@ namespace Engine.ViewModels
             MundoAtual = factory.CreateWorld();
 
             LocalAtual = MundoAtual.localAtual(0, 0);
-            
-            
-            
-            
-            
 
+        }
+        public void MoveNorth()
+        {
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY + 1);
+        }
+
+        public void MoveEast()
+        {
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX +1, LocalAtual.coordenadaY);
+        }
+
+        public void MoveSouth()
+        {
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY - 1);
+        }
+
+        public void MoveWest()
+        {
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX -1, LocalAtual.coordenadaY);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
