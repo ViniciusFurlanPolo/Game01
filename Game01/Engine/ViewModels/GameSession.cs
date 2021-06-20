@@ -1,4 +1,5 @@
-﻿using Engine.Models;
+﻿using Engine.Factories;
+using Engine.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Engine.ViewModels
     {
         public Player PlayerAtual { get; set; }
         public Location LocalAtual { get; set; }
+        public World MundoAtual { get; set; }
 
         public GameSession()
         {
@@ -20,12 +22,15 @@ namespace Engine.ViewModels
             PlayerAtual.exp = 0;
             PlayerAtual.level = 1;
 
-            LocalAtual = new Location();
-            LocalAtual.lugar = "Home";
-            LocalAtual.coordenadaX = 0;
-            LocalAtual.coordenadaY = -1;
-            LocalAtual.descricao = "This is your house";
-            LocalAtual.imageFile = "pack://application:,,,/Engine;component/Images/Locations/Home.png";
+            WorldFactory factory = new WorldFactory();
+            MundoAtual = factory.CreateWorld();
+
+            LocalAtual = MundoAtual.localAtual(0, 0);
+            
+            
+            
+            
+            
 
         }
     }

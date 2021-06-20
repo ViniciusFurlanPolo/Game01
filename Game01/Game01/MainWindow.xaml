@@ -83,7 +83,8 @@
                             Source="{Binding LocalAtual.imageFile}"/>
 
                     <TextBlock Grid.Row="2" HorizontalAlignment="Center"
-                               Text="{Binding LocalAtual.descricao}"/>
+                               Text="{Binding LocalAtual.descricao}"
+                               TextWrapping="Wrap"/>
 
 
 
