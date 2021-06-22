@@ -62,38 +62,55 @@ namespace Engine.ViewModels
 
         public GameSession()
         {
-            PlayerAtual = new Player();
-            PlayerAtual.nome = "Arthur";
-            PlayerAtual.gold = 100;
-            PlayerAtual.classe = "Fighter";
-            PlayerAtual.hitPoints = 10;
-            PlayerAtual.exp = 0;
-            PlayerAtual.level = 1;
+            PlayerAtual = new Player 
+                            {
+                                nome = "Arthur",
+                                classe = "Guerreiro",
+                                hitPoints = 100,
+                                exp = 970,
+                                level = 4,
+                                gold = 800
+                            };
 
-            WorldFactory factory = new WorldFactory();
-            MundoAtual = factory.CreateWorld();
+            MundoAtual = WorldFactory.CreateWorld();
 
             LocalAtual = MundoAtual.localAtual(0, 0);
 
         }
         public void MoveNorth()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY + 1);
+            if (HasLocationToNorth)
+            {
+                LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY + 1);
+            }
+            
         }
 
         public void MoveEast()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX + 1, LocalAtual.coordenadaY);
+            if (HasLocationToEast)
+            {
+                LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX + 1, LocalAtual.coordenadaY);
+            }
+            
         }
 
         public void MoveSouth()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY - 1);
+            if (HasLocationToSouth)
+            {
+                LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX, LocalAtual.coordenadaY - 1);
+            }
+            
         }
 
         public void MoveWest()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX - 1, LocalAtual.coordenadaY);
+            if (HasLocationToWest)
+            {
+                LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX - 1, LocalAtual.coordenadaY);
+            }
+            
         }
     }
 }
