@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Engine.ViewModels
 {
-    public class GameSession : INotifyPropertyChanged
+    public class GameSession : BaseNotificationClass
     {
         private Location Location;
 
@@ -20,11 +20,11 @@ namespace Engine.ViewModels
             {
                 Location = value;
 
-                OnPropertyChanged("LocalAtual");
-                OnPropertyChanged("HasLocationToNorth");
-                OnPropertyChanged("HasLocationToEast");
-                OnPropertyChanged("HasLocationToWest");
-                OnPropertyChanged("HasLocationToSouth");
+                OnPropertyChanged(nameof(LocalAtual));
+                OnPropertyChanged(nameof(HasLocationToNorth));
+                OnPropertyChanged(nameof(HasLocationToEast));
+                OnPropertyChanged(nameof(HasLocationToWest));
+                OnPropertyChanged(nameof(HasLocationToSouth));
             }
         }
 
@@ -95,12 +95,4 @@ namespace Engine.ViewModels
         {
             LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX -1, LocalAtual.coordenadaY);
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
 }

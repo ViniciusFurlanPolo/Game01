@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Engine.Models
 {
-    public class Player : INotifyPropertyChanged
+    public class Player : BaseNotificationClass
     {
 
         private String Nome;
@@ -26,7 +26,7 @@ namespace Engine.Models
             set 
             {
                 Nome = value;
-                OnPropertyChanged("nome");
+                OnPropertyChanged(nameof(nome));
             }
         }
 
@@ -36,7 +36,7 @@ namespace Engine.Models
             set 
             {
                 Classe = value;
-                OnPropertyChanged("classe");
+                OnPropertyChanged(nameof(classe));
             }
         }
 
@@ -46,7 +46,7 @@ namespace Engine.Models
             set
             {
                 HP = value;
-                OnPropertyChanged("hitPoints");
+                OnPropertyChanged(nameof(hitPoints));
             }
         }
 
@@ -56,7 +56,7 @@ namespace Engine.Models
             set 
             {
                 Xp = value;
-                OnPropertyChanged("exp");
+                OnPropertyChanged(nameof(exp));
             }
         }
 
@@ -66,7 +66,7 @@ namespace Engine.Models
             set
             {
                 Level = value;
-                OnPropertyChanged("level");
+                OnPropertyChanged(nameof(level));
             }
         }
 
@@ -76,16 +76,11 @@ namespace Engine.Models
             set
             {
                 Gold = value;
-                OnPropertyChanged("gold");
+                OnPropertyChanged(nameof(gold));
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(String PropertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
-        }
+       
 
     }
 }
