@@ -13,7 +13,7 @@ namespace Engine.ViewModels
 
         public Player PlayerAtual { get; set; }
         public World MundoAtual { get; set; }
-        public Location LocalAtual 
+        public Location LocalAtual
         {
             get { return Location; }
             set
@@ -40,7 +40,7 @@ namespace Engine.ViewModels
         {
             get
             {
-                return MundoAtual.localAtual(LocalAtual.coordenadaX +1, LocalAtual.coordenadaY) != null;
+                return MundoAtual.localAtual(LocalAtual.coordenadaX + 1, LocalAtual.coordenadaY) != null;
             }
         }
 
@@ -56,7 +56,7 @@ namespace Engine.ViewModels
         {
             get
             {
-                return MundoAtual.localAtual(LocalAtual.coordenadaX -1, LocalAtual.coordenadaY) != null;
+                return MundoAtual.localAtual(LocalAtual.coordenadaX - 1, LocalAtual.coordenadaY) != null;
             }
         }
 
@@ -83,7 +83,7 @@ namespace Engine.ViewModels
 
         public void MoveEast()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX +1, LocalAtual.coordenadaY);
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX + 1, LocalAtual.coordenadaY);
         }
 
         public void MoveSouth()
@@ -93,6 +93,7 @@ namespace Engine.ViewModels
 
         public void MoveWest()
         {
-            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX -1, LocalAtual.coordenadaY);
+            LocalAtual = MundoAtual.localAtual(LocalAtual.coordenadaX - 1, LocalAtual.coordenadaY);
         }
+    }
 }
