@@ -76,6 +76,8 @@ namespace Engine.ViewModels
 
             LocalAtual = MundoAtual.localAtual(0, 0);
 
+            PlayerAtual.Inventory.Add(ItemFactory.CriarItem(1003));
+
         }
         public void MoveNorth()
         {
